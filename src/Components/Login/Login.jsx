@@ -1,15 +1,18 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom'
 import { FaUser, FaLock } from "react-icons/fa";
 import "./Login.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     console.log("Dados de Login:", { username, password });
+
+    navigate('/home');
   };
 
   return (
