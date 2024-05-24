@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from "react-router-dom";
 import { FaUser, FaLock } from "react-icons/fa";
 import "./Login.css";
 
@@ -12,7 +12,7 @@ const Login = () => {
     event.preventDefault();
     console.log("Dados de Login:", { username, password });
 
-    navigate('/home');
+    navigate("/home");
   };
 
   return (
@@ -50,7 +50,10 @@ const Login = () => {
         <button type="submit">Acessar</button>
         <div className="signup-link">
           <p>
-            Não tem uma conta? <a href="#">Registar</a>{" "}
+            Não tem uma conta?
+            <Link to="/register">
+              Registar
+            </Link>
           </p>
         </div>
       </form>
