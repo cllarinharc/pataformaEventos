@@ -7,13 +7,21 @@ import Home from "./Components/Home/Home";
 import "./App.css";
 import Register from "./Components/Register/Register";
 
+import AuthLayout from "./Layouts/AuthLayout";
+import DefaultLayout from "./Layouts/DefaultLayout";
+
 function App() {
   return (
-    <div className="App">
+    <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route element={<DefaultLayout />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+       
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+      </Route>
       </Routes>
     </div>
   );

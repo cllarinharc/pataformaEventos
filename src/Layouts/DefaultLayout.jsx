@@ -1,28 +1,32 @@
-import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import Button from 'react-bootstrap/Button';
 
-const Home = () => {
+const DefaultLayout = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log("Dados de Home:", { username, password });
+    console.log("Dados de Default:", { username, password });
   };
 
   return (
     <Container>
       <Row>
         <Col>
-          <h1>Home</h1>
+          <h1>DefaultLayout</h1>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Outlet />
         </Col>
       </Row>
     </Container>
   );
 };
 
-export default Home;
+export default DefaultLayout;
