@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-
-import Button from 'react-bootstrap/Button';
+import Typography from "@mui/joy/Typography";
 
 const Home = () => {
 
@@ -15,13 +11,11 @@ const Home = () => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col>
-          <h1>Home</h1>
-        </Col>
-      </Row>
-    </Container>
+    <>
+        <Typography level="h2" component="h1">
+            Home
+        </Typography>
+    </>
   );
 };
 

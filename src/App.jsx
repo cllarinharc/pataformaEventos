@@ -3,8 +3,9 @@ import { Link, Routes, Route, useNavigate } from "react-router-dom";
 
 import Login from "./Components/Login/Login";
 import Home from "./Components/Home/Home";
+import Events from "./Components/Events/Events";
+import Reports from "./Components/Reports/Reports";
 
-import "./App.css";
 import Register from "./Components/Register/Register";
 
 import AuthLayout from "./Layouts/AuthLayout";
@@ -16,6 +17,8 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/reports" element={<Reports />} />
         </Route>
        
         <Route element={<AuthLayout />}>

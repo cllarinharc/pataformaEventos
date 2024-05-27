@@ -2,9 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Helvetica;
-  text-shadow: #000 1px 1px;
-  color: #fff;
 }
 
 .App {
@@ -15,4 +12,7 @@
   background: url("../assets/Component.png") no-repeat;
   background-size: cover;
   background-position: center;
+  font-family: Helvetica;
+  text-shadow: #000 1px 1px;
+  color: #fff;
 }
