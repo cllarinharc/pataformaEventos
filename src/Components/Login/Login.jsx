@@ -22,7 +22,7 @@ const Login = () => {
         <div className="input-field">
           <input
             type="text"
-            placeholder="E-mail"
+            placeholder="Endereço de e-mail *"
             required
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -32,12 +32,11 @@ const Login = () => {
         <div className="input-field">
           <input
             type="password"
-            placeholder="Senha"
+            placeholder="Senha *"
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <FaLock className="icon" />
         </div>
 
         <div className="recall-forget">
@@ -50,10 +49,7 @@ const Login = () => {
         <button type="submit">Acessar</button>
         <div className="signup-link">
           <p>
-            Não tem uma conta?
-            <Link to="/register">
-              Registar
-            </Link>
+            Não tem uma conta? <Link to="/register">Registrar</Link>
           </p>
         </div>
       </form>

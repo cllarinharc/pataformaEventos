@@ -27,7 +27,7 @@ const Register = () => {
         <div className="input-field">
           <input
             type="text"
-            placeholder="Nome de usuário"
+            placeholder="Nome de usuário *"
             required
             value={username}
             onChange={(e) => setUsername(e.target.value)}
@@ -37,7 +37,7 @@ const Register = () => {
         <div className="input-field">
           <input
             type="email"
-            placeholder="E-mail"
+            placeholder="Endereço de e-mail *"
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -47,22 +47,21 @@ const Register = () => {
         <div className="input-field">
           <input
             type="password"
-            placeholder="Senha"
+            placeholder="Senha *"
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          />
-          <FaLock className="icon" />
+          />         
         </div>
+
         <div className="input-field">
           <input
             type="password"
-            placeholder="Confirme a senha"
+            placeholder="Confirme a senha *"
             required
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <FaLock className="icon" />
         </div>
 
         <button type="submit">Registrar</button>
