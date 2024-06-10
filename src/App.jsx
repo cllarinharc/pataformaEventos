@@ -1,4 +1,4 @@
-import { useState } from "react";
+import  {useState}  from "react";
 import { Link, Routes, Route, useNavigate } from "react-router-dom";
 
 import Login from "./Components/Login/Login";
@@ -6,6 +6,7 @@ import Home from "./Components/Home/Home";
 import Events from "./Components/Events/Events";
 import AddEvents from "./Components/Events/AddEvents";
 import Reports from "./Components/Reports/Reports";
+import Disposition from "./Components/Disposition/Disposition"
 
 import Register from "./Components/Register/Register";
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/events/add" element={<AddEvents />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="/disposition" element={<Disposition />} /> 
         </Route>
        
         <Route element={<AuthLayout />}>

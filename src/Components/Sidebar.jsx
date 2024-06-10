@@ -18,11 +18,8 @@ import { Link as RouterLink, useNavigate } from "react-router-dom";
 
 import { closeSidebar } from "../utils";
 
-function Toggler({
-  defaultExpanded = false,
-  renderToggle,
-  children,
-}) {
+
+function Toggler({ defaultExpanded = false, renderToggle, children }) {
   const [open, setOpen] = React.useState(defaultExpanded);
   return (
     <React.Fragment>
@@ -146,6 +143,15 @@ export default function Sidebar() {
               <AssessmentRoundedIcon />
               <ListItemContent>
                 <Typography level="title-sm">Relatórios</Typography>
+              </ListItemContent>
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem>
+            <ListItemButton component={RouterLink} to="/disposition">
+              <AssessmentRoundedIcon/>
+              <ListItemContent>
+                <Typography level="title-sm">Certificado</Typography>
               </ListItemContent>
             </ListItemButton>
           </ListItem>
